@@ -1,7 +1,7 @@
 package com.jad;
 
 public class Grault {
-    private Foo foo;
+    private Foo foo = null;
 
     public Grault(Foo foo) {
         this.foo = foo;
@@ -9,9 +9,5 @@ public class Grault {
 
     public Foo getFoo() {
         return foo;
-    }
-
-    public void setFoo(Foo foo) {
-        this.foo = foo;
     }
 }
