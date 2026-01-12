@@ -1,32 +1,33 @@
-import java.lang.reflect.Array;
 package com.jad;
+import java.util.List;
 
 public class Foo {
-    private Bar bar;
-    private Array<Baz> bazs;
-    private Qux qux;
-    private Corge corge;
-    private Array<Grault> graults;
 
-    public Foo(Bar bar) {
-        this.bar = bar;
-    }
+        private Bar bar;
+        private List<Baz> bazs;
+        private Qux qux;
+        private Corge corge;
+        private List<Grault> graults;
 
-    public addBaz(Baz baz) {
-        this.bazs.add(baz);
-    }
+        public Foo(Bar bar) {
+            this.bar = bar;
+        }
 
-    public addGrault(Grault grault) {
-        this.graults.add(grault);
-    }
+        public void addBaz(Baz baz) {
+            this.bazs.add(baz);
+        }
 
-    public Bar getBar() {
-        return bar;
-    }
+        public void addGrault(Grault grault) {
+            this.graults.add(grault);
+        }
 
-    public Array<Baz> getBazs() {
-        return bazs;
-    }
+        public Bar getBar() {
+            return bar;
+        }
+
+        public List<Baz> getBazs() {
+            return bazs;
+        }
 
     public Qux getQux() {
         return qux;
@@ -36,7 +37,7 @@ public class Foo {
         return corge;
     }
 
-    public Array<Grault> getGraults() {
+    public List<Grault> getGraults() {
         return graults;
     }
 
