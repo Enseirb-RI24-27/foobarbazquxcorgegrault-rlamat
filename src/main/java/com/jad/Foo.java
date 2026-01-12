@@ -4,10 +4,10 @@ import java.util.List;
 public class Foo {
 
         private Bar bar;
-        private List<Baz> bazs;
-        private Qux qux;
+        private List<Baz> bazs = new java.util.ArrayList<>();
+        private Qux qux = new Qux();
         private Corge corge;
-        private List<Grault> graults;
+        private List<Grault> graults = new java.util.ArrayList<>();
 
         public Foo(Bar bar) {
             this.bar = bar;
@@ -17,8 +17,8 @@ public class Foo {
             this.bazs.add(baz);
         }
 
-        public void addGrault(Grault grault) {
-            this.graults.add(grault);
+        public void addGrault() {
+            this.graults.add(new Grault(this));
         }
 
         public Bar getBar() {
