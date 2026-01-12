@@ -41,7 +41,18 @@ public class Foo {
         return graults;
     }
 
-    public void setCorge(Corge corge) {
-        this.corge = corge;
+    public void setCorge(Corge newCorge) {
+        if (this.corge == newCorge) return;
+
+        Corge oldCorge = this.corge;
+        this.corge = null;
+        if (oldCorge != null && oldCorge.getFoo() == this) {
+            oldCorge.setFoo(null);
+        }
+
+        this.corge = newCorge;
+        if (newCorge != null && newCorge.getFoo() != this) {
+            newCorge.setFoo(this);
+        }
     }
 }
